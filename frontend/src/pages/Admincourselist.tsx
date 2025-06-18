@@ -24,7 +24,7 @@ type Course = {
   course_type: string;
 };
 
-const IMAGE_BASE_URL = "http://localhost:5000";
+const IMAGE_BASE_URL = "https://open-destence-learningbackend.onrender.com";
 
 const Admincourselist: React.FC = () => {
   const [courses, setCourses] = useState<Course[]>([]);
@@ -41,7 +41,7 @@ const Admincourselist: React.FC = () => {
       setLoading(true);
       setError("");
       try {
-        const res = await axios.post("http://localhost:5000/courses/getallcourses", {
+        const res = await axios.post("https://open-destence-learningbackend.onrender.com/courses/getallcourses", {
           page: 1,
           limit: 1000,
           token,
@@ -104,7 +104,7 @@ const Admincourselist: React.FC = () => {
     if (!confirm("Are you sure you want to delete this course?")) return;
 
     try {
-      const res = await axios.post("http://localhost:5000/courses/deleteCourse", {
+      const res = await axios.post("https://open-destence-learningbackend.onrender.com/courses/deleteCourse", {
         token,
         accesstoken,
         course_id: courseId,
@@ -113,7 +113,7 @@ const Admincourselist: React.FC = () => {
       if (res.data.success) {
         alert(res.data.message || "Course deleted successfully");
         // Refresh course list
-        const fetchRes = await axios.post("http://localhost:5000/courses/getallcourses", {
+        const fetchRes = await axios.post("https://open-destence-learningbackend.onrender.com/courses/getallcourses", {
           page: 1,
           limit: 1000,
           token,
@@ -145,7 +145,7 @@ const Admincourselist: React.FC = () => {
     if (!confirm(`Are you sure you want to delete module ID ${moduleId}?`)) return;
 
     try {
-      const res = await axios.post("http://localhost:5000/modules/deleteModule", {
+      const res = await axios.post("https://open-destence-learningbackend.onrender.com/modules/deleteModule", {
         token,
         accesstoken,
         module_id: parseInt(moduleId),
