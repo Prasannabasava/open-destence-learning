@@ -65,7 +65,7 @@ const AddModulesToCourse: React.FC = () => {
           return;
         }
         const res = await axios.post(
-          'http://localhost:5000/courses/getallcourses',
+          'https://open-destence-learningbackend.onrender.com/courses/getallcourses',
           { token, accesstoken, page: 1, limit: 100 },
           { headers: { 'Content-Type': 'application/json' } }
         );
@@ -353,7 +353,7 @@ const AddModulesToCourse: React.FC = () => {
     });
 
     try {
-      const res = await axios.post('http://localhost:5000/courses/addmodules', data, {
+      const res = await axios.post('https://open-destence-learningbackend.onrender.com/courses/addmodules', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,
