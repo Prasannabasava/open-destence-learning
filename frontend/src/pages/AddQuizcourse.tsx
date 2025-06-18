@@ -50,7 +50,7 @@ const AddQuizcourse: React.FC = () => {
         }, 10000);
 
         const response = await axios.post(
-          "http://localhost:5000/courses/getallcourses",
+          "https://open-destence-learningbackend.onrender.com/courses/getallcourses",
           { token, accesstoken, page: 1, limit: 100 },
           {
             headers: { "Content-Type": "application/json" },
@@ -109,7 +109,7 @@ const AddQuizcourse: React.FC = () => {
         }, 10000);
 
         const response = await axios.post(
-          "http://localhost:5000/courses/getallmodules",
+          "https://open-destence-learningbackend.onrender.com/courses/getallmodules",
           { course_id: formData.courseId, token, accesstoken },
           {
             headers: { "Content-Type": "application/json" },
@@ -191,7 +191,7 @@ const AddQuizcourse: React.FC = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/enroll/generatequiz",
+        "https://open-destence-learningbackend.onrender.com/enroll/generatequiz",
         payload,
         {
           headers: { "Content-Type": "application/json" },
