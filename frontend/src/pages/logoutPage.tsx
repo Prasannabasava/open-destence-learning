@@ -20,7 +20,7 @@ const LogoutPage: React.FC = () => {
     setLoggingOut(true);
     try {
       const res = await axios.post(
-        "http://localhost:5000/logout",
+        "https://open-destence-learningbackend.onrender.com/logout",
         {},
         {
           headers: {
