@@ -221,7 +221,7 @@ const AddCourse: React.FC = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/courses/addcourse', data, {
+      const res = await axios.post('https://open-destence-learningbackend.onrender.com/courses/addcourse', data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
