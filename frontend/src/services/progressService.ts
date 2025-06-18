@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const API_URL = "http://localhost:5000"
+const API_URL = "https://open-destence-learningbackend.onrender.com"
 
 const getTokens = () => {
   const token = localStorage.getItem("token")
