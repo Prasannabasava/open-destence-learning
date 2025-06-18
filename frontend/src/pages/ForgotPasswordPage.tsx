@@ -19,7 +19,7 @@
 
 //     try {
 //       console.log('Sending forgot password request:', { email });
-//       const response = await axios.post('http://localhost:5000/user/forgot-password', { email }, {
+//       const response = await axios.post('https://open-destence-learningbackend.onrender.com/user/forgot-password', { email }, {
 //         headers: {
 //           'Content-Type': 'application/json',
 //         },
@@ -101,7 +101,7 @@ const ForgotPasswordPage = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/user/forgot-password',
+        'https://open-destence-learningbackend.onrender.com/user/forgot-password',
         { email },
         {
           headers: { 'Content-Type': 'application/json' },
