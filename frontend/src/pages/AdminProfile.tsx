@@ -19,7 +19,7 @@ interface ProfileData {
   } | null
 }
 
-const IMAGE_BASE_URL = "http://localhost:5000"
+const IMAGE_BASE_URL = "https://open-destence-learningbackend.onrender.com"
 
 const ProfilePage: React.FC = () => {
   const [profile, setProfile] = useState<ProfileData | null>(null)
@@ -51,7 +51,7 @@ const ProfilePage: React.FC = () => {
 
     setLoading(true)
     try {
-      const res = await fetch("http://localhost:5000/user/view-profile", {
+      const res = await fetch("https://open-destence-learningbackend.onrender.com/user/view-profile", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -131,7 +131,7 @@ const ProfilePage: React.FC = () => {
       formData.append("token", token)
       formData.append("accesstoken", accesstoken)
 
-      const res = await fetch("http://localhost:5000/user/profile-pic", {
+      const res = await fetch("https://open-destence-learningbackend.onrender.com/user/profile-pic", {
         method: "POST",
         body: formData,
       })
@@ -171,7 +171,7 @@ const ProfilePage: React.FC = () => {
         user_login_email: form.user_login_email || profile!.user_login_email,
       }
 
-      const res = await fetch("http://localhost:5000/user/update-profile", {
+      const res = await fetch("https://open-destence-learningbackend.onrender.com/user/update-profile", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
