@@ -53,7 +53,7 @@ const QuizManagement: React.FC<QuizManagementProps> = ({ courseId, courseTitle }
         throw new Error("Missing authentication tokens");
       }
 
-      const response = await fetch("http://localhost:5000/quiz/getquizforcompletecourse", {
+      const response = await fetch("https://open-destence-learningbackend.onrender.com/quiz/getquizforcompletecourse", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -108,7 +108,7 @@ const QuizManagement: React.FC<QuizManagementProps> = ({ courseId, courseTitle }
         return;
       }
 
-      const response = await fetch("http://localhost:5000/quiz/generateQuizzesAfterCourseComplete", {
+      const response = await fetch("https://open-destence-learningbackend.onrender.com/quiz/generateQuizzesAfterCourseComplete", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
