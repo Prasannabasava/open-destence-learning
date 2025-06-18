@@ -94,7 +94,7 @@
 //         user_mobile: mobile,
 //       };
 
-//       const res = await axios.post('http://localhost:5000/user/signup', payload, {
+//       const res = await axios.post('https://open-destence-learningbackend.onrender.com/user/signup', payload, {
 //         headers: {
 //           'Content-Type': 'application/json',
 //         },
@@ -331,7 +331,7 @@ const SignupPage = () => {
         user_mobile: mobile,
       };
 
-      const res = await axios.post('http://localhost:5000/user/signup', payload, {
+      const res = await axios.post('https://open-destence-learningbackend.onrender.com/user/signup', payload, {
         headers: {
           'Content-Type': 'application/json',
         },
