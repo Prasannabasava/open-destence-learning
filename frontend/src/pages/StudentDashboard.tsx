@@ -12,7 +12,7 @@ import CoursesList from "./CourseList"
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
-const IMAGE_BASE_URL = "http://localhost:5000"
+const IMAGE_BASE_URL = "https://open-destence-learningbackend.onrender.com"
 
 type EnrolledCourse = {
   course_id: number
@@ -73,7 +73,7 @@ const StudentDashboard: React.FC = () => {
     setProfileLoading(true)
 
     try {
-      const res = await fetch("http://localhost:5000/user/view-profile", {
+      const res = await fetch("https://open-destence-learningbackend.onrender.com/user/view-profile", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ const StudentDashboard: React.FC = () => {
 
     try {
       // Fetch enrolled courses
-      const response = await fetch("http://localhost:5000/enroll/getenrollcourses", {
+      const response = await fetch("https://open-destence-learningbackend.onrender.com/enroll/getenrollcourses", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ token, accesstoken }),
@@ -130,7 +130,7 @@ const StudentDashboard: React.FC = () => {
         setEnrolledCourses(data.data)
 
         // Fetch progress data
-        const progressResponse = await fetch("http://localhost:5000/enroll/getcourseprogress", {
+        const progressResponse = await fetch("https://open-destence-learningbackend.onrender.com/enroll/getcourseprogress", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ token, accesstoken }),
