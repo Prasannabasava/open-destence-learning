@@ -45,7 +45,7 @@ const UpdateCourse: React.FC = () => {
 
       try {
         setLoading(true);
-        const response = await axios.post('http://localhost:5000/courses/getcoursebyid', {
+        const response = await axios.post('https://open-destence-learningbackend.onrender.com/courses/getcoursebyid', {
           token,
           accesstoken,
           course_id: id,
@@ -154,7 +154,7 @@ const UpdateCourse: React.FC = () => {
 
     try {
       setLoading(true);
-      const response = await axios.put('http://localhost:5000/courses/updatecourse', data, {
+      const response = await axios.put('https://open-destence-learningbackend.onrender.com/courses/updatecourse', data, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
