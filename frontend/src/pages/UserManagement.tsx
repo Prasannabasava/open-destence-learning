@@ -53,7 +53,7 @@ interface UpdateUserData {
 }
 
 class UserService {
-  private baseUrl = "http://localhost:5000/adduser";
+  private baseUrl = "https://open-destence-learningbackend.onrender.com/adduser/adduser";
 
   async getAllUsers(): Promise<ApiResponse<UserData>> {
     try {
