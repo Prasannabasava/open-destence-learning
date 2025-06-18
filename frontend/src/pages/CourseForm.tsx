@@ -34,7 +34,7 @@ const CourseForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/add-course', {
+      await axios.post('https://open-destence-learningbackend.onrender.com/courses/add-course', {
         title,
         description,
         modules,
