@@ -33,7 +33,7 @@ interface ChartData {
   enrolledUsers: number
 }
 
-const IMAGE_BASE_URL = "http://localhost:5000"
+const IMAGE_BASE_URL = "https://open-destence-learningbackend.onrender.com"
 
 const AdminDashboard: React.FC = () => {
   const navigate = useNavigate()
@@ -64,7 +64,7 @@ const AdminDashboard: React.FC = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/user/view-profile", {
+      const res = await fetch("https://open-destence-learningbackend.onrender.com/user/view-profile", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -101,7 +101,7 @@ const AdminDashboard: React.FC = () => {
         return
       }
 
-      const response = await axios.post("http://localhost:5000/count/getenrolledcount", { 
+      const response = await axios.post("https://open-destence-learningbackend.onrender.com/count/getenrolledcount", { 
         token, 
         accesstoken 
       })
@@ -130,7 +130,7 @@ const AdminDashboard: React.FC = () => {
         return
       }
 
-      const response = await axios.post("http://localhost:5000/count/getcoursescount", { 
+      const response = await axios.post("https://open-destence-learningbackend.onrender.com/count/getcoursescount", { 
         token, 
         accesstoken 
       })
@@ -158,7 +158,7 @@ const AdminDashboard: React.FC = () => {
         }
 
         // Fetch total users
-        const totalUsersResponse = await axios.post("http://localhost:5000/count/total-users", { token, accesstoken })
+        const totalUsersResponse = await axios.post("https://open-destence-learningbackend.onrender.com/count/total-users", { token, accesstoken })
         if (totalUsersResponse.data.success) {
           setTotalUsers(totalUsersResponse.data.totalUsers)
         } else {
@@ -166,7 +166,7 @@ const AdminDashboard: React.FC = () => {
         }
 
         // Fetch users today
-        const usersTodayResponse = await axios.post("http://localhost:5000/count/users-today", { token, accesstoken })
+        const usersTodayResponse = await axios.post("https://open-destence-learningbackend.onrender.com/count/users-today", { token, accesstoken })
         if (usersTodayResponse.data.success) {
           setUsersToday(usersTodayResponse.data.usersToday)
         } else {
