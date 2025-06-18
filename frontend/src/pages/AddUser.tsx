@@ -29,7 +29,7 @@ const AddUser: React.FC = () => {
       const token = localStorage.getItem('token');
       const accesstoken = localStorage.getItem('accesstoken');
 
-      const response = await axios.post('http://localhost:5000/adduser/adduser', {
+      const response = await axios.post('https://open-destence-learningbackend.onrender.com/adduser/adduser', {
         token,
         accesstoken,
         userData: formData,
