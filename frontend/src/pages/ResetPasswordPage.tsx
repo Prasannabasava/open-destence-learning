@@ -27,7 +27,7 @@ const ResetPasswordPage = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/user/reset-password', {
+      const response = await axios.post('https://open-destence-learningbackend.onrender.com/user/reset-password', {
         uid,
         Eemail,
         new_password: newPassword,
