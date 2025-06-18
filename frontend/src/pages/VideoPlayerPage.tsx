@@ -50,7 +50,7 @@ const VideoPlayerPage: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/enroll/savecourseprogress",
+        "https://open-destence-learningbackend.onrender.com/enroll/savecourseprogress",
         {
           token,
           accesstoken,
@@ -96,7 +96,7 @@ const VideoPlayerPage: React.FC = () => {
       <h2 className="text-2xl font-bold text-gray-800 mb-4">{videoTitle}</h2>
 
       <video
-        src={`http://localhost:5000/uploads/videos/${videoUrl}`}
+        src={`https://open-destence-learningbackend.onrender.com/uploads/videos/${videoUrl}`}
         controls
         autoPlay
         className="w-full rounded mb-6"
