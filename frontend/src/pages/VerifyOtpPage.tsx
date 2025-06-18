@@ -22,7 +22,7 @@
 //     setLoading(true);
 
 //     try {
-//       const response = await axios.post('http://localhost:5000/user/verify-otp', {
+//       const response = await axios.post('https://open-destence-learningbackend.onrender.com/user/verify-otp', {
 //         user_login_email: userLoginEmail,
 //         otp,
 //       });
@@ -49,7 +49,7 @@
 //     setResendLoading(true);
 
 //     try {
-//       const response = await axios.post('http://localhost:5000/user/resend-otp', {
+//       const response = await axios.post('https://open-destence-learningbackend.onrender.com/user/resend-otp', {
 //         resendotptype: 'validateregister',
 //         useremail: userLoginEmail,
 //       }, {
@@ -147,7 +147,7 @@ const VerifyOTPPage = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/user/verify-otp', {
+      const response = await axios.post('https://open-destence-learningbackend.onrender.com/user/verify-otp', {
         user_login_email: userLoginEmail,
         otp,
       });
@@ -175,7 +175,7 @@ const VerifyOTPPage = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/user/resend-otp',
+        'https://open-destence-learningbackend.onrender.com/user/resend-otp',
         {
           resendotptype: 'validateregister',
           useremail: userLoginEmail,
