@@ -62,7 +62,7 @@ const CourseDetails: React.FC = () => {
         }
 
         const response = await axios.post(
-          "http://localhost:5000/courses/viewcoursedetails",
+          "https://open-destence-learningbackend.onrender.com/courses/viewcoursedetails",
           {
             token,
             accesstoken,
@@ -209,7 +209,7 @@ const QuizComponent: React.FC<{
 
         // Fetch quiz questions
         const response = await axios.post(
-          "http://localhost:5000/enroll/getquiz",
+          "https://open-destence-learningbackend.onrender.com/enroll/getquiz",
           { token, accesstoken, module_id: moduleId },
           { headers: { "Content-Type": "application/json" } }
         );
@@ -222,7 +222,7 @@ const QuizComponent: React.FC<{
           // Check if quiz is already taken for all
           if (quizIds.length > 0) {
             const scoreRes = await axios.post(
-              "http://localhost:5000/enroll/getscore",
+              "https://open-destence-learningbackend.onrender.com/enroll/getscore",
               { token, accesstoken, quiz_ids: quizIds },
               { headers: { "Content-Type": "application/json" } }
             );
@@ -295,7 +295,7 @@ const QuizComponent: React.FC<{
         const quiz_id = questions[i].quiz_id;
         if (!quiz_id) continue;
         await axios.post(
-          "http://localhost:5000/enroll/savescore",
+          "https://open-destence-learningbackend.onrender.com/enroll/savescore",
           {
             token,
             accesstoken,
