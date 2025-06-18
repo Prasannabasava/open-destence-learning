@@ -56,7 +56,7 @@
 
 //     try {
 //       console.log("Sending login request with:", formData)
-//       const response = await axios.post("http://localhost:5000/user/login", formData)
+//       const response = await axios.post("https://open-destence-learningbackend.onrender.com/user/login", formData)
 //       console.log("Login response:", response.data)
 
 //       if (response.data.success) {
@@ -258,7 +258,7 @@ const LoginPage: React.FC = () => {
 
     try {
       console.log("Sending login request with:", formData)
-      const response = await axios.post("http://localhost:5000/user/login", formData)
+      const response = await axios.post("https://open-destence-learningbackend.onrender.com/user/login", formData)
       console.log("Login response:", response.data)
 
       if (response.data.success) {
