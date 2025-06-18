@@ -40,7 +40,7 @@ const Contact = () => {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const response = await axios.post("http://localhost:5000/user/contact", values, {
+      const response = await axios.post("https://open-destence-learningbackend.onrender.com/user/contact", values, {
         headers: {
           "Content-Type": "application/json",
         },
