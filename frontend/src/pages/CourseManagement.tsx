@@ -57,7 +57,7 @@ interface ApiResponse<T = any> {
 }
 
 class EnrollmentService {
-  private baseUrl = "http://localhost:5000"
+  private baseUrl = "https://open-destence-learningbackend.onrender.com"
 
   private getAuthHeaders() {
     const token = localStorage.getItem("token")
