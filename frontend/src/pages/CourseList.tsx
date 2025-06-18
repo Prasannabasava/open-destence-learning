@@ -22,7 +22,7 @@
 //   course_type: string;
 // };
 
-// const IMAGE_BASE_URL = "http://localhost:5000";
+// const IMAGE_BASE_URL = "https://open-destence-learningbackend.onrender.com";
 
 // const CoursesList: React.FC = () => {
 //   const [courses, setCourses] = useState<Course[]>([]);
@@ -43,7 +43,7 @@
 
 //       try {
 //         const res = await axios.post(
-//           "http://localhost:5000/courses/getallcourses",
+//           "https://open-destence-learningbackend.onrender.com/courses/getallcourses",
 //           {
 //             page: 1,
 //             limit: 1000, // Fetch all courses
@@ -86,7 +86,7 @@
 //       setEnrollingCourseId(courseId);
 
 //       const res = await axios.post(
-//         "http://localhost:5000/enroll/enroll",
+//         "https://open-destence-learningbackend.onrender.com/enroll/enroll",
 //         {
 //           course_id: courseId,
 //           token,
@@ -251,7 +251,7 @@ type Course = {
   course_type: string
 }
 
-const IMAGE_BASE_URL = "http://localhost:5000"
+const IMAGE_BASE_URL = "https://open-destence-learningbackend.onrender.com"
 
 const CoursesList: React.FC = () => {
   const [courses, setCourses] = useState<Course[]>([])
@@ -274,7 +274,7 @@ const CoursesList: React.FC = () => {
 
       try {
         const res = await axios.post(
-          "http://localhost:5000/courses/getallcourses",
+          "https://open-destence-learningbackend.onrender.com/courses/getallcourses",
           { page: 1, limit: 1000, token, accesstoken },
           { headers: { "Content-Type": "application/json" } }
         )
@@ -308,7 +308,7 @@ const CoursesList: React.FC = () => {
       setEnrollingCourseId(courseId)
 
       const res = await axios.post(
-        "http://localhost:5000/enroll/enroll",
+        "https://open-destence-learningbackend.onrender.com/enroll/enroll",
         { course_id: courseId, token, accesstoken },
         { headers: { "Content-Type": "application/json" } }
       )
